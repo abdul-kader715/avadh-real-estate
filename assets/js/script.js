@@ -612,17 +612,17 @@
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -643,24 +643,24 @@
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [{
-                breakpoint: 1024,
+                breakpoint: 1107,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 840,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 1,
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 500,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -694,7 +694,7 @@
             arrows: false,
             responsive: {
                 0: {
-                    items: 2
+                    items: 1
                 },
 
                 550: {
@@ -724,24 +724,24 @@
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [{
-                breakpoint: 1024,
+                breakpoint: 1100,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 3,
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 767,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 500,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
                 }
             }
         ]
@@ -966,7 +966,7 @@
         toggleMobileNavigation();
 
         smallNavFunctionality();
-        heroSlider() 
+        heroSlider()
     });
 
 

@@ -33,6 +33,12 @@
 
 		
 
+		@include media-query(1399px) {
+			font-size: 40px;
+		}
+		@include media-query(1199px) {
+			font-size: 33px;
+		}
 		@include media-query(767px) {
 			font-size: 32px;
 			line-height: 40px;
@@ -49,9 +55,12 @@
 	}
 	.shape-title{
 		position: absolute;
-		top: -20px;
-		left: 315px;
+		top: 0;
+		left: 50%;
 		transform: translate(-50% , -50%);
+		img{ 
+			width: 100%;
+		}
 		
 	}
 
