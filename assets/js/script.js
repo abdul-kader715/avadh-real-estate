@@ -719,6 +719,7 @@
         dots: false,
         infinite: true,
         arrows: true,
+        centerMode: true,
         autoplay: true,
         speed: 300,
         slidesToShow: 3,
