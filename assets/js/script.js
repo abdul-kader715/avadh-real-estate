@@ -141,7 +141,7 @@
     function heroSlider() {
         if ($(".hero-slider").length) {
             $(".hero-slider").slick({
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 6000,
                 pauseOnHover: true,
                 arrows: true,
@@ -260,9 +260,6 @@
 
                 //active wow
                 wow.init();
-
-
-
             });
         }
     }
@@ -454,28 +451,27 @@
 
 
 
-    /*------------------------------------------
-            = Header search toggle
-        -------------------------------------------*/
-    if ($(".header-search-form-wrapper").length) {
+/*------------------------------------------
+        = Header search toggle
+    -------------------------------------------*/
+    if($(".header-search-form-wrapper").length) {
         var searchToggleBtn = $(".search-toggle-btn");
         var searchToggleBtnIcon = $(".search-toggle-btn i");
         var searchContent = $(".header-search-form");
         var body = $("body");
 
-        searchToggleBtn.on("click", function (e) {
+        searchToggleBtn.on("click", function(e) {
             searchContent.toggleClass("header-search-content-toggle");
-            searchToggleBtnIcon.toggleClass("fi flaticon-loupe fi ti-close");
+            searchToggleBtnIcon.toggleClass("fi flaticon-search fi ti-close");
             e.stopPropagation();
         });
 
-        body.on("click", function () {
+        body.on("click", function() {
             searchContent.removeClass("header-search-content-toggle");
-        }).find(searchContent).on("click", function (e) {
+        }).find(searchContent).on("click", function(e) {
             e.stopPropagation();
         });
     }
-
 
     /*------------------------------------------
         = Header shopping cart toggle
@@ -547,6 +543,7 @@
             loop: true,
             autoplayHoverPause: true,
             dots: true,
+            navText: ['<i class="fi ti-arrow-left"></i>', '<i class="fi ti-arrow-right"></i>'],
             nav: false,
             responsive: {
                 0: {
@@ -556,17 +553,20 @@
                 },
 
                 500: {
-                    items: 1,
+                    items: 2,
                     dots: true,
                     nav: false
                 },
 
                 768: {
-                    items: 2,
+                    items: 3,
                 },
 
+                992: {
+                    items: 3,
+                },
                 1200: {
-                    items: 3
+                    items: 4,
                 },
 
                 1400: {
@@ -597,18 +597,27 @@
         = Team SLIDER
     -------------------------------------------*/
 
-    $('.team-slider').slick({
+    $('.wpo-team-slider').slick({
         dots: false,
         infinite: true,
-        arrows: false,
+        arrows: true,
         speed: 300,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         responsive: [{
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
                 }
             },
             {
@@ -616,6 +625,8 @@
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
                 }
             },
             {
@@ -623,6 +634,7 @@
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    dots: true,
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -715,40 +727,47 @@
     /*------------------------------------------
         = blog-slider
     -------------------------------------------*/
-    $('.blog-slider').slick({
-        dots: false,
-        infinite: true,
-        arrows: true,
-        centerMode: true,
-        autoplay: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [{
-                breakpoint: 1100,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 500,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
+
+
+  
+    if ($(".wpo-blog-slider").length) {
+        $(".wpo-blog-slider").owlCarousel({
+            autoplay: false,
+            smartSpeed: 300,
+            margin: 20,
+            center:true,
+            loop: true,
+            autoplayHoverPause: true,
+            dots: true,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    dots: true,
+                    nav: false
+                },
+
+                500: {
+                    items: 1,
+                    dots: true,
+                    nav: false
+                },
+
+                768: {
+                    items: 2,
+                },
+
+                1200: {
+                    items: 3
+                },
+
+                1400: {
+                    items: 3
+                },
+
             }
-        ]
-    });
-
-
+        });
+    }
 
 
     /*------------------------------------------
