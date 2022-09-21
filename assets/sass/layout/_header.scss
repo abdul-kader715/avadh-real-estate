@@ -1642,6 +1642,9 @@
 		&::before{
 			position: unset;
 		}
+			@media (max-width:991px) {
+				background: $dark-gray;
+			}
 		.sticky-header{
 			
 			&:before{

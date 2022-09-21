@@ -1,7 +1,13 @@
 /*--------------------------------------------------------------
-16. wpo-blog-single-section
+18. wpo-blog-single-section
 --------------------------------------------------------------*/
 .wpo-blog-single-section {
+
+	.container{
+		@media(min-width:1440px){
+          max-width: 1320px;
+		}
+	}
 
 	.entry-meta {
 		list-style: none;
@@ -21,7 +27,7 @@
 				font-size: calc-rem-value(14);
 				float: left;
 				text-transform: uppercase;
-
+				color: $text-color-s2;
 				a {
 					color: #636893;
 		
@@ -32,13 +38,8 @@
 
 				i{
 					position: relative;
-					top: 0;
+					top: 2px;
 					margin-right: 3px;
-					&.fi{
-						&:before{
-							font-size: 13px;
-						}
-					}
 				}
 	
 				&+li{
@@ -97,6 +98,7 @@
 			margin: -0.22em 0 0.7em;
 			line-height: 1.3em;
 			font-family: $heading-font;
+			font-weight: 400;
 
 			@include media-query(991px) {
 				font-size: 30px;
@@ -111,12 +113,13 @@
 
 		p {
 			margin-bottom: 1.5em;
+			color: $text-color-s2;
 		}
 
 		h3 {
 			font-size: 24px;
 			font-size: calc-rem-value(24);
-			font-weight: 600;
+			font-weight: 400;
 			line-height: 1.3em;
 			margin: 1.8em 0 1em;
 
@@ -134,17 +137,18 @@
 
 
 		blockquote {
-			background-color: $section-bg-color;
+			background-color: $border-color;
 			color: #233d62;
-			font-size: 20px;
-			line-height: 1.6em;
+			font-size: 19px;
 			padding: 65px;
 			margin-top: 60px;
 			margin-bottom: 40px;
 			border: 0;
 			text-align: center;
 			position: relative;
-			text-decoration: underline;
+			font-weight: 400;
+			line-height: 35px;
+			padding-bottom: 45px;
 
 			@include media-query(767px) {
 				padding: 55px 25px;
@@ -152,9 +156,9 @@
 
 			&:before {
 				font-family: "Flaticon";
-				content: "\f10a";
-				font-size: 25px;
-				font-size: calc-rem-value(25);
+				content: "\f108";
+				font-size: 20px;
+				font-size: calc-rem-value(20);
 				color: transparentize($white, 0.5);
 				position: absolute;
 				left: 50%;
@@ -231,7 +235,7 @@
 			> span {
 				font-family: $heading-font;
 				color: $heading-color;
-				font-weight: 600;
+				font-weight: 400;
 				display: inline-block;
 				padding-right: 15px;
 				text-transform: uppercase;
@@ -248,14 +252,14 @@
 
 
 			a {
-				font-size: 12px;
-				font-size: calc-rem-value(12);
+				font-size: 13px;
+				font-size: calc-rem-value(13);
 				display: inline-block;
 				padding: 5px 18px;
 				color: $dark-gray;
-				background: #ecf4fb;
+				background: transparentize($theme-primary-color, .9);
 				border-radius: 5px;
-				text-transform: uppercase;
+				font-weight: 400;
 
 				@include media-query(767px) {
 					font-size: 13px;
@@ -318,13 +322,14 @@
 
 	    .author-content p {
 	    	margin-bottom: 20px;
+			color: $text-color-s2;
 	    }
 
 	    .author-name {
 	    	font-family: $heading-font;
 	    	font-size: 24px;
 	    	font-size: calc-rem-value(24);
-	    	font-weight: 600;
+	    	font-weight: 400;
 	    	display: inline-block;
 		    margin-bottom: 10px;
 		    color: $heading-color;
@@ -452,19 +457,20 @@
 			font-size: calc-rem-value(14);
 			color: $text-color;
 			text-transform: uppercase;
-			font-weight: 600;
+			font-weight: 400;
 			letter-spacing: 2px;
 		}
 
 		.post-name {
-			font-size: 16px;
-			font-size: calc-rem-value(16);
+			font-family: $heading-font;
+			font-size: 18px;
+			font-size: calc-rem-value(18);
 			color: $heading-color;
 			margin: 0.7em 0 0;
 
 			@include media-query(991px) {
-				font-size: 16px;
-				font-size: calc-rem-value(16);
+				font-size: 18px;
+				font-size: calc-rem-value(18);
 			}
 		}
 
@@ -542,6 +548,7 @@
 
 			p {
 				margin-bottom: 20px;
+				color: $text-color-s2;
 			}
 		}
 
@@ -549,8 +556,8 @@
 
 			h4 {
 				font-family: $heading-font;
-				font-size: 20px;
-				font-size: calc-rem-value(20);
+				font-size: 18px;
+				font-size: calc-rem-value(18);
 				color: $heading-color;
 				font-weight: bold;
 				margin: 0 0 1em;
@@ -574,9 +581,9 @@
 
 		.comment-reply-link {
 			font-family: $heading-font;
-			font-size: 13px;
-			font-size: calc-rem-value(13);
-			font-weight: 600;
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+			font-weight: 400;
 			color: $dark-gray;
 			text-align: center;
 			border-radius: 50px;
@@ -669,7 +676,7 @@
 		.form-submit input {
 			font-family: $heading-font;
 			max-width: 180px;
-			background-color: #1e2845;
+			background-color: $theme-primary-color;
 			color: $white;
 			margin-bottom: 0;
 			border: 0;
@@ -678,10 +685,11 @@
 			font-size: 15px;
 			letter-spacing: 2px;
 			border-radius: 30px;
+			line-height: 41px;
 		}
 
 		.form-submit input:hover {
-			background-color:$dark-gray;
+			background-color:darken($theme-primary-color, 9%);
 		}
 	}
 }

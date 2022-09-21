@@ -125,7 +125,7 @@
 		animation: fadeOutLeft 1.5s both;
 	}
 
-	.slide-caption>.hero-right-text  {
+	.hero-right-text  {
 		-webkit-animation: fadeOutRight 1.5s both;
 		animation: fadeOutRight 1.5s both;
 	}
@@ -146,7 +146,7 @@
 		animation-name: fadeInLeft;
 	}
 
-	.hero-slider .slick-current .slide-caption>.hero-right-text  {
+	.hero-slider .slick-current .hero-right-text  {
 		-webkit-animation-name: fadeInRight;
 		animation-name: fadeInRight;
 	}
@@ -162,7 +162,7 @@
 		animation-delay: 1.5s;
 	}
 
-	.hero-slider .slick-current .slide-caption>.hero-right-text  {
+	.hero-slider .slick-current .hero-right-text  {
 		-webkit-animation-delay: 2s;
 		animation-delay: 2s;
 	}
@@ -297,14 +297,17 @@
 			font-size: 18px;
 			font-size: calc-rem-value(18);
 			padding-right: 0;
+			line-height: 25px;
 		}
 
 		@include media-query(991px) {
 			margin: 0 0 1.8em;
+			font-size: 15px;
+			line-height: 20px;
 		}
 	}
 
-	.slide-caption .hero-right-text {
+	 .hero-right-text {
 		width: 480px;
 		background: $theme-primary-color;
 		padding: 40px 30px;
@@ -313,7 +316,6 @@
 		position: absolute;
 		bottom: 0%;
 		right: -24%;
-
 		@media (max-width:992px) {
 			padding: 20px;
 			width: 350px;
@@ -327,6 +329,9 @@
 		@media (max-width:425px) {
 			padding: 10px;
 			width: 310px;
+		}
+		@media (max-width:389px) {
+			display: none;
 		}
 
 		.grid {
@@ -386,7 +391,7 @@
 			.text {
 				float: left;
 				width: 60%;
-				padding-left: 30px;
+				padding-right: 30px;
 				padding-top: 15px;
 
 				@media (max-width:767px) {
@@ -765,10 +770,24 @@
 	.slide-title{
 		max-width: 780px;
 		margin: auto;
+
+		@include media-query(1199px) {
+			max-width: 550px;
+		}
+		@include media-query(575px) {
+			max-width: 100%;
+		}
+
 		h2{
 			text-transform: capitalize;
 			font-weight: 600;
 			line-height: 100px;
+			@include media-query(1199px) {
+				line-height: 60px;
+			}
+			@include media-query(767px) {
+				line-height: 40px;
+			}
 		}
 	}
 	.slide-text{
