@@ -1,4 +1,5 @@
-// wpo-about-section
+
+/* 3.2 wpo-about-section */
 .wpo-about-section {
     background: $white;
 
@@ -203,10 +204,10 @@
     }
 }
 
-// wpo-services-section
-.wpo-services-section,
-.wpo-services-section-s2,
-.wpo-services-section-s3 {
+/* 3.3 wpo-service-section */
+.wpo-service-section,
+.wpo-service-section-s2,
+.wpo-service-section-s3 {
     background: $small-black;
     position: relative;
     z-index: 1;
@@ -400,7 +401,7 @@
 
 }
 
-// wpo-cta-section
+/* 3.4 wpo-cta-section*/
 .wpo-cta-section {
     margin-top: -70px;
     position: relative;
@@ -485,7 +486,7 @@
     }
 }
 
-// wpo-team-section
+/* 3.5 wpo-team-section */
 .wpo-team-section,
 .wpo-team-section-s2 {
     .team-wrapper {
@@ -717,7 +718,7 @@
     }
 }
 
-// wpo-project-section
+/* 3.6 wpo-project-section */
 .wpo-project-section,
 .wpo-project-area-s2{
     background: $theme-primary-color-s2;
@@ -945,7 +946,7 @@
 
 }
 
-// wpo-testimonial-section
+/* 3.7 wpo-testimonial-section*/
 .wpo-testimonial-section,
 .wpo-testimonial-section-s2 {
     position: relative;
@@ -1163,9 +1164,57 @@
     }
 }
 
-/*--------------------------------------------------------------
-#1.3 wpo-blog-section
---------------------------------------------------------------*/
+/* 3.8 wpo-partners-section  */
+.wpo-partners-section  {
+    background: url(../images/partners/partners-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    &::before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: $text-color;
+        z-index: -1;
+        opacity: 0.9;
+    }
+
+
+
+    .hidden{
+        display: none;
+    }
+    .partners-slider{
+
+        .grid{
+            img{
+                margin: 0 auto;
+                transition: all .3s ease-in-out;
+            }
+            &:hover{
+                img{
+                    filter: grayscale(100%);
+                }
+            }
+        }
+
+        .owl-item img{
+            width: unset;
+        }
+
+        .owl-nav{
+            display: none;
+        }
+    }
+}
+
+
+/* 3.9 wpo-blog-section*/
 .wpo-blog-section {
     background: $border-color-s3;
 
@@ -1354,58 +1403,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-/* 5.11 partners-section   */
-
-.partners-section {
-    background: url(../images/partners/partners-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    z-index: 1;
-    &::before{
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        width: 100%;
-        height: 100%;
-        background: $text-color;
-        z-index: -1;
-        opacity: 0.9;
-    }
-
-
-
-
-
-    .hidden{
-        display: none;
-    }
-    .partners-slider{
-
-        .grid{
-            img{
-                margin: 0 auto;
-                transition: all .3s ease-in-out;
-            }
-            &:hover{
-                img{
-                    filter: grayscale(100%);
-                }
-            }
-        }
-
-        .owl-item img{
-            width: unset;
-        }
-
-        .owl-nav{
-            display: none;
         }
     }
 }

@@ -908,6 +908,10 @@
 
                 phone: "required",
 
+                adress: "required",
+
+                service: "required", 
+
                 subject: {
                     required: true
                 }

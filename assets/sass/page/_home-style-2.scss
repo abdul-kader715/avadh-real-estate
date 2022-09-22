@@ -1,5 +1,8 @@
-/* 3.2 wpo-about-area */
+/*======================================
+ 2. Home-style-2 
+ =======================================*/
 
+/* 5.1 wpo-about-area-s2 */
 .wpo-about-area-s2 {
     .wpo-about-img {
         position: relative;
@@ -141,9 +144,9 @@
     }
 }
 
-// .wpo-services-section-s2
-.wpo-services-section-s2,
-.wpo-services-section-s3 {
+/* 5.2 wpo-service-section-s2 */
+.wpo-service-section-s2,
+.wpo-service-section-s3 {
 
     .scervice-item {
         text-align: center;
@@ -253,7 +256,7 @@
 
 }
 
-// wpo-team-section-s2
+/* 5.3 wpo-team-section-s2 */
 .wpo-team-section-s2 {
     padding-bottom: 90px;
     @media (max-width:991px) {
@@ -293,8 +296,7 @@
 
 }
 
-/* 3.5 wpo-fun-fact-section */
-
+/* 3.4 wpo-fun-fact-section */
 .wpo-fun-fact-section,
 .wpo-fun-fact-section-s2 {
 	text-align: center;
